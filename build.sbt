@@ -11,6 +11,8 @@ val assemblyVersion = "0.15.0"
 lazy val batch = (project in file("."))
   .settings(
     libraryDependencies ++= Seq(
+      "org.postgresql" % "postgresql" % "42.2.20",
+      "mysql" % "mysql-connector-java" % "8.0.25",
       "org.apache.spark" %% "spark-core" % sparkVersion % "provided",
       "org.apache.spark" %% "spark-hive" % sparkVersion % "provided",
       "org.apache.spark" %% "spark-sql" % sparkVersion % "provided",
